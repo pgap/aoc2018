@@ -1,0 +1,38 @@
+name:                aoc2018
+version:             0.1.0.0
+github:              "pgap/aoc2018"
+license:             ISC
+author:              "Andreas Persson"
+maintainer:          "andreas.g.persson@gmail.com"
+copyright:           "2018 Andreas Persson"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Advent of Code 2018 solutions
+# category:            Web
+
+description:           Advent of Code 2018 solutions
+
+dependencies:
+- base >= 4.7 && < 5
+- bytestring
+- containers
+- directory
+- http-client
+- http-client-tls
+- http-types
+- megaparsec
+- vector
+
+library:
+  source-dirs: lib
+  exposed-modules:
+    - AOC.Grid
+    - AOC.Input
+    - AOC.Misc
+    - AOC.Parsing
+    - AOC.Search
+
