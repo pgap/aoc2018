@@ -43,3 +43,10 @@ executables:
     source-dirs:         haskell
     dependencies:
     - aoc2018
+
+  day2:
+    main:                Day2.hs
+    other-modules:       []
+    source-dirs:         haskell
+    dependencies:
+    - aoc2018
