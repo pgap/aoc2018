@@ -1,6 +1,6 @@
 module AOC.Misc where
 
-import Data.List (tails)
+import Data.List (inits, tails)
 import qualified Data.Map as M
 import qualified Data.Set as S
 
@@ -21,3 +21,6 @@ combinations 0 _  = return []
 combinations n xs = do y:ts <- tails xs
                        ys   <- combinations (n-1) ts
                        return (y:ys)
+
+pickOne :: [a] -> [(a, [a])]
+pickOne xs = [ (x, l ++ r) | (l, x:r) <- zip (inits xs) (tails xs) ]
