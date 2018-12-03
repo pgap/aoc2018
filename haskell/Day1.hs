@@ -8,8 +8,8 @@ import qualified Data.Set as Set
 year = 2018
 day  = 1
 
-parseLine :: Parser Int
-parseLine = number
+parser :: Parser Int
+parser = number
 
 firstRecurring :: Ord a => [a] -> Maybe a
 firstRecurring xs = search xs (Set.empty)
@@ -28,7 +28,6 @@ part2 xs = s
 
 main :: IO ()
 main = do
-  input <- getParsedLines year day parseLine
+  input <- getParsedLines year day parser
   print $ part1 input
   print $ part2 input
-

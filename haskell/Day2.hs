@@ -22,6 +22,7 @@ part2 ss = head [common | s1 <- ss,
                           let common = [c1 | (c1, c2) <- zip s1 s2, c1 == c2],
                           length common == length s1 - 1]
 
+main :: IO ()
 main = do
   input <- parseInput <$> getInput year day
   print $ part1 input
